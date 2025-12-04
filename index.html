@@ -32,7 +32,8 @@
       align-items: center;
       justify-content: center;
       padding: 2rem;
-      overflow: hidden;
+      overflow-x: hidden;
+      overflow-y: auto;
     }
 
     .noise {
@@ -326,50 +327,124 @@
         align-items: flex-start;
       }
     }
+
+    .site-hero {
+      margin-bottom: 3rem;
+    }
+
+    .site-hero h1 {
+      margin: 0 0 1rem;
+      font-size: clamp(2.6rem, 5vw, 4.2rem);
+      line-height: 1.05;
+    }
+
+    .site-hero .lede {
+      margin: 0 0 1.5rem;
+    }
+
+    .hero-highlights {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .hero-highlights li {
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 999px;
+      padding: 0.35rem 1rem;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08rem;
+      color: var(--text-muted);
+    }
   </style>
 </head>
 <body>
   <div class="noise"></div>
   <main class="container" role="main">
-    <div class="eyebrow">The Fleaky Test</div>
-    <h1>Something new is rolling out soon.</h1>
-    <p class="lede">
-      This space is evolving into my personal playground for deep-dive how-tos, battle-tested tips, and hot takes on
-      emerging QA tooling. Add your email if you want first dibs when new testing stories drop.
-    </p>
+    <header class="site-hero">
+      <div class="eyebrow">The Fleaky Test</div>
+      <h1>Field notes on hunting down flaky automation.</h1>
+      <p class="lede">
+        This space is evolving into my personal playground for deep-dive how-tos, battle-tested tips, and hot takes on
+        emerging QA tooling. Add your email if you want first dibs when new testing stories drop.
+      </p>
+      <ul class="hero-highlights">
+        <li>How-to briefs</li>
+        <li>Debug diaries</li>
+        <li>New tooling watch</li>
+      </ul>
+    </header>
 
-    <section class="countdown" aria-label="Countdown to launch">
-      <div class="count-box">
-        <span class="value" id="days">00</span>
-        <span class="label">Days</span>
-      </div>
-      <div class="count-box">
-        <span class="value" id="hours">00</span>
-        <span class="label">Hours</span>
-      </div>
-      <div class="count-box">
-        <span class="value" id="minutes">00</span>
-        <span class="label">Minutes</span>
-      </div>
-      <div class="count-box">
-        <span class="value" id="seconds">00</span>
-        <span class="label">Seconds</span>
-      </div>
-    </section>
-
-    <div class="progress-label">
-      <span>Beta readiness</span>
-      <span>62%</span>
-    </div>
-    <div class="progress-bar" role="presentation">
-      <span aria-hidden="true"></span>
-    </div>
-
-    <form>
-      <label class="sr-only" for="email-input">Email address</label>
-      <input id="email-input" type="email" placeholder="Email for early access" required />
-      <button type="submit">Notify Me</button>
-    </form>
+    <article class="feature-article">
+      <header>
+        <div>
+          <div class="article-tagline">Issue 01 · Draft</div>
+          <h2>Blueprint for Taming Fleaky UI Suites</h2>
+        </div>
+        <div class="article-meta">
+          <time datetime="2025-12-04" class="published">Dec 4, 2025</time>
+          <span class="reading-time" aria-label="7 minutes read">~7 min read</span>
+        </div>
+      </header>
+      <p>
+        Use this opening paragraph for your real intro—outline the problem you are solving and why it matters to fellow
+        automation engineers. Keep it conversational and share just enough context before diving into the tactics.
+      </p>
+      <p>
+        Drop a quick summary of the testing stack, frameworks in play, and any constraints future you should remember.
+        Mention browsers, pipelines, or service mocks that tend to wobble so readers can mirror conditions on their end.
+      </p>
+      <blockquote>
+        “Teaser quote or core lesson goes here. Think of it as the tweet-sized version of the article.”
+      </blockquote>
+      <section class="article-grid">
+        <div class="article-card">
+          <h3>01 · Discovery</h3>
+          <p>
+            Use this card to capture your observation workflow: logs to inspect, dashboards to watch, and heuristics for
+            spotting flaky signatures. Lorem ipsum placeholder copy keeps the layout intact until you paste in details.
+          </p>
+        </div>
+        <div class="article-card">
+          <h3>02 · Stabilization</h3>
+          <p>
+            Outline the fixes or guardrails you are experimenting with—feature toggles, smarter waits, contract mocks, or
+            CI heuristics. Again, replace the filler text with the exact recipe once you finalize the write-up.
+          </p>
+        </div>
+        <div class="article-card">
+          <h3>03 · Signal Boost</h3>
+          <p>
+            Save this panel for open questions, metrics you plan to publish, or callouts to supporting repos. Lorem
+            ipsum dolor sit amet keeps the spacing ready until you link the real artifacts.
+          </p>
+        </div>
+      </section>
+      <p>
+        Consider closing with lessons learned or a checklist readers can apply immediately. Donec congue, leo sit amet
+        dictum luctus, lacus mi tristique augue, vel malesuada justo nisl ut massa. Pellentesque habitant morbi
+        tristique senectus et netus et malesuada fames ac turpis egestas.
+      </p>
+      <ul>
+        <li>Action item placeholder one.</li>
+        <li>Action item placeholder two.</li>
+        <li>Action item placeholder three.</li>
+      </ul>
+      <p>
+        Wrap things up with next steps or upcoming experiments. Vestibulum in iaculis orci, sed condimentum justo.
+        Maecenas volutpat, ipsum nec aliquet venenatis, lorem ipsum faucibus sapien, vel porttitor libero velit ac urna.
+      </p>
+      <footer class="article-footer">
+        <div>
+          <span>Draft status · Update the copy when ready.</span>
+        </div>
+        <button type="button" aria-label="Placeholder article CTA">Pin for Newsletter</button>
+      </footer>
+    </article>
 
     <div class="footnote">
       <span>Built with ❤️ for The Fleaky Test community.</span>
@@ -379,7 +454,7 @@
             <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.27-.01-1.15-.02-2.09-3.2.7-3.88-1.38-3.88-1.38-.53-1.34-1.3-1.7-1.3-1.7-1.07-.73.08-.72.08-.72 1.18.08 1.8 1.21 1.8 1.21 1.05 1.8 2.76 1.28 3.43.98.11-.76.41-1.28.74-1.57-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.29 1.2-3.1-.12-.29-.52-1.47.11-3.06 0 0 .98-.31 3.2 1.18.93-.26 1.92-.39 2.9-.39.99 0 1.98.13 2.9.39 2.22-1.49 3.2-1.18 3.2-1.18.63 1.59.23 2.77.11 3.06.75.81 1.2 1.84 1.2 3.1 0 4.41-2.69 5.39-5.25 5.67.42.36.79 1.08.79 2.18 0 1.57-.01 2.84-.01 3.23 0 .31.21.68.8.56A10.52 10.52 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z" />
           </svg>
         </a>
-        <a href="mailto:hello@example.com" aria-label="Email">
+        <a href="mailto:hello@example.co" aria-label="Email">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path d="M2 5c0-1.1.9-2 2-2h16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5Zm2-.5c-.28 0-.5.22-.5.5v.71l8.5 4.71 8.5-4.71V5c0-.28-.22-.5-.5-.5H4Zm15.5 4.47L12.7 13.5a1.5 1.5 0 0 1-1.4 0L4.5 8.97V19c0 .28.22.5.5.5h14c.28 0 .5-.22.5-.5V8.97Z" />
           </svg>
@@ -391,109 +466,6 @@
         </a>
       </div>
     </div>
-
-    <article class="feature-article">
-      <header>
-        <div>
-          <div class="article-tagline">Placeholder Tagline</div>
-          <h2>Working Title For An Upcoming Insight Piece</h2>
-        </div>
-        <div class="article-meta">
-          <time datetime="2025-12-04" class="published">Dec 4, 2025</time>
-          <span class="reading-time" aria-label="5 minutes read">~5 min read</span>
-        </div>
-      </header>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porta, lorem ac posuere auctor, justo quam
-        mollis ante, non viverra enim velit nec magna. Integer dapibus ligula id libero efficitur, at viverra lectus
-        dapibus. Pellentesque in ornare lectus, nec tempor purus.
-      </p>
-      <p>
-        Curabitur vehicula, quam id luctus tristique, lectus justo aliquam nisl, ut convallis lorem lorem quis nisi.
-        Phasellus sagittis purus eget velit rhoncus, in viverra arcu volutpat. Vestibulum mattis varius velit, vitae
-        sodales arcu. Donec congue, leo sit amet dictum luctus, lacus mi tristique augue, vel malesuada justo nisl ut
-        massa.
-      </p>
-      <blockquote>
-        “Add a short pull quote or teaser sentence here that hints at the core message you plan to publish.”
-      </blockquote>
-      <section class="article-grid">
-        <div class="article-card">
-          <h3>Section Placeholder</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas convallis, risus a pellentesque bibendum,
-            lorem urna consequat mi, vitae suscipit dolor sem et est.
-          </p>
-        </div>
-        <div class="article-card">
-          <h3>Key Metrics</h3>
-          <p>
-            Integer vel molestie erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
-            curae; Nullam suscipit, erat vitae euismod aliquet.
-          </p>
-        </div>
-        <div class="article-card">
-          <h3>Next Steps</h3>
-          <p>
-            Etiam consequat, ipsum id ornare consectetur, lacus eros finibus elit, nec ultrices turpis justo ac nulla.
-            Suspendisse dignissim sapien et posuere pellentesque.
-          </p>
-        </div>
-      </section>
-      <p>
-        Ut eu mollis leo. In vel purus dui. Vivamus sollicitudin, nulla vitae convallis luctus, urna arcu imperdiet est,
-        eget sodales sem erat et velit. Cras laoreet orci in pharetra aliquam. Sed a facilisis urna, vitae pretium
-        lorem. Integer id placerat purus.
-      </p>
-      <ul>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-        <li>Praesent malesuada dui et augue dictum, vitae vehicula dolor finibus.</li>
-        <li>Donec tincidunt odio sit amet risus dignissim, sed laoreet diam fringilla.</li>
-      </ul>
-      <p>
-        Vestibulum in iaculis orci, sed condimentum justo. Suspendisse et felis nunc. Maecenas volutpat, ipsum nec
-        aliquet venenatis, lorem ipsum faucibus sapien, vel porttitor libero velit ac urna. Nullam at augue non mauris
-        suscipit malesuada quis ac mauris.
-      </p>
-      <footer class="article-footer">
-        <div>
-          <span>Draft version: Placeholder v0.1</span>
-        </div>
-        <button type="button" aria-label="Placeholder action CTA">Reserve Full Article Slot</button>
-      </footer>
-    </article>
   </main>
-
-  <script>
-    const target = new Date('2026-01-15T12:00:00Z').getTime();
-    const daysEl = document.getElementById('days');
-    const hoursEl = document.getElementById('hours');
-    const minutesEl = document.getElementById('minutes');
-    const secondsEl = document.getElementById('seconds');
-
-    function updateCountdown() {
-      const now = Date.now();
-      const diff = Math.max(target - now, 0);
-
-      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-      const minutes = Math.floor((diff / (1000 * 60)) % 60);
-      const seconds = Math.floor((diff / 1000) % 60);
-
-      daysEl.textContent = String(days).padStart(2, '0');
-      hoursEl.textContent = String(hours).padStart(2, '0');
-      minutesEl.textContent = String(minutes).padStart(2, '0');
-      secondsEl.textContent = String(seconds).padStart(2, '0');
-    }
-
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
-
-    document.querySelector('form').addEventListener('submit', (event) => {
-      event.preventDefault();
-      event.target.reset();
-      alert('Thanks! We will keep you posted.');
-    });
-  </script>
 </body>
 </html>
