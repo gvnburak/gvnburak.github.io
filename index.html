@@ -224,6 +224,90 @@
       transform: translateY(-2px);
     }
 
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+
+    .feature-article {
+      margin: 3rem 0;
+      padding: 2.5rem;
+      border-radius: 20px;
+      background: rgba(5, 8, 18, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: inset 0 0 40px rgba(106, 245, 255, 0.07);
+    }
+
+    .feature-article header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .feature-article h2 {
+      margin: 0;
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+    }
+
+    .article-meta {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    .article-tagline {
+      text-transform: uppercase;
+      letter-spacing: 0.3rem;
+      font-size: 0.75rem;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .feature-article p {
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .article-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .article-card {
+      padding: 1.5rem;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(12, 18, 35, 0.7);
+    }
+
+    .article-footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 1.5rem;
+    }
+
+    .article-footer button {
+      flex: unset;
+      min-width: 200px;
+    }
+
     @media (max-width: 560px) {
       .container {
         padding: 2rem;
@@ -236,6 +320,11 @@
       button {
         width: 100%;
       }
+
+      .article-footer {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
   </style>
 </head>
@@ -245,8 +334,8 @@
     <div class="eyebrow">The Fleaky Test</div>
     <h1>Something new is rolling out soon.</h1>
     <p class="lede">
-      I am are crafting a refined experience for test automation toolkit and knowledge base.
-      Join the early list to hear when the platform goes live.
+      This space is evolving into my personal playground for deep-dive how-tos, battle-tested tips, and hot takes on
+      emerging QA tooling. Add your email if you want first dibs when new testing stories drop.
     </p>
 
     <section class="countdown" aria-label="Countdown to launch">
@@ -283,7 +372,7 @@
     </form>
 
     <div class="footnote">
-      <span>Built with ❤️ for the QA community.</span>
+      <span>Built with ❤️ for The Fleaky Test community.</span>
       <div class="socials">
         <a href="https://github.com/" aria-label="GitHub">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -302,6 +391,77 @@
         </a>
       </div>
     </div>
+
+    <article class="feature-article">
+      <header>
+        <div>
+          <div class="article-tagline">Placeholder Tagline</div>
+          <h2>Working Title For An Upcoming Insight Piece</h2>
+        </div>
+        <div class="article-meta">
+          <time datetime="2025-12-04" class="published">Dec 4, 2025</time>
+          <span class="reading-time" aria-label="5 minutes read">~5 min read</span>
+        </div>
+      </header>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porta, lorem ac posuere auctor, justo quam
+        mollis ante, non viverra enim velit nec magna. Integer dapibus ligula id libero efficitur, at viverra lectus
+        dapibus. Pellentesque in ornare lectus, nec tempor purus.
+      </p>
+      <p>
+        Curabitur vehicula, quam id luctus tristique, lectus justo aliquam nisl, ut convallis lorem lorem quis nisi.
+        Phasellus sagittis purus eget velit rhoncus, in viverra arcu volutpat. Vestibulum mattis varius velit, vitae
+        sodales arcu. Donec congue, leo sit amet dictum luctus, lacus mi tristique augue, vel malesuada justo nisl ut
+        massa.
+      </p>
+      <blockquote>
+        “Add a short pull quote or teaser sentence here that hints at the core message you plan to publish.”
+      </blockquote>
+      <section class="article-grid">
+        <div class="article-card">
+          <h3>Section Placeholder</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas convallis, risus a pellentesque bibendum,
+            lorem urna consequat mi, vitae suscipit dolor sem et est.
+          </p>
+        </div>
+        <div class="article-card">
+          <h3>Key Metrics</h3>
+          <p>
+            Integer vel molestie erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
+            curae; Nullam suscipit, erat vitae euismod aliquet.
+          </p>
+        </div>
+        <div class="article-card">
+          <h3>Next Steps</h3>
+          <p>
+            Etiam consequat, ipsum id ornare consectetur, lacus eros finibus elit, nec ultrices turpis justo ac nulla.
+            Suspendisse dignissim sapien et posuere pellentesque.
+          </p>
+        </div>
+      </section>
+      <p>
+        Ut eu mollis leo. In vel purus dui. Vivamus sollicitudin, nulla vitae convallis luctus, urna arcu imperdiet est,
+        eget sodales sem erat et velit. Cras laoreet orci in pharetra aliquam. Sed a facilisis urna, vitae pretium
+        lorem. Integer id placerat purus.
+      </p>
+      <ul>
+        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+        <li>Praesent malesuada dui et augue dictum, vitae vehicula dolor finibus.</li>
+        <li>Donec tincidunt odio sit amet risus dignissim, sed laoreet diam fringilla.</li>
+      </ul>
+      <p>
+        Vestibulum in iaculis orci, sed condimentum justo. Suspendisse et felis nunc. Maecenas volutpat, ipsum nec
+        aliquet venenatis, lorem ipsum faucibus sapien, vel porttitor libero velit ac urna. Nullam at augue non mauris
+        suscipit malesuada quis ac mauris.
+      </p>
+      <footer class="article-footer">
+        <div>
+          <span>Draft version: Placeholder v0.1</span>
+        </div>
+        <button type="button" aria-label="Placeholder action CTA">Reserve Full Article Slot</button>
+      </footer>
+    </article>
   </main>
 
   <script>
@@ -337,4 +497,3 @@
   </script>
 </body>
 </html>
-
