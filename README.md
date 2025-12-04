@@ -1,1 +1,0 @@
-# gvnburak.github.io
